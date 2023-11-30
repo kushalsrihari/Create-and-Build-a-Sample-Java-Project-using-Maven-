@@ -1,0 +1,88 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Maven Project
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential kushalsrihari
+Cloning the remote Git repository
+Cloning repository https://github.com/kushalsrihari/Create-and-Build-a-Sample-Java-Project-using-Maven-.git
+ > git init /var/lib/jenkins/workspace/Maven Project # timeout=10
+Fetching upstream changes from https://github.com/kushalsrihari/Create-and-Build-a-Sample-Java-Project-using-Maven-.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials kushalsrihari
+ > git fetch --tags --force --progress -- https://github.com/kushalsrihari/Create-and-Build-a-Sample-Java-Project-using-Maven-.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/kushalsrihari/Create-and-Build-a-Sample-Java-Project-using-Maven-.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 866f11992c59a773547b6b4e709bae92cb0a40e0 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 866f11992c59a773547b6b4e709bae92cb0a40e0 # timeout=10
+Commit message: "Create pom.xml"
+ > git rev-list --no-walk 866f11992c59a773547b6b4e709bae92cb0a40e0 # timeout=10
+Parsing POMs
+Established TCP socket on 43813
+[my-app] $ java -cp /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.14.jar:/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/boot/plexus-classworlds-2.7.0.jar:/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/conf/logging jenkins.maven3.agent.Maven35Main /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven /var/cache/jenkins/war/WEB-INF/lib/remoting-3160.vd76b_9ddd10cc.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.14.jar /var/lib/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.14.jar 43813
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f /var/lib/jenkins/workspace/Maven Project/my-app/pom.xml clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.mycompany.app:my-app >----------------------
+[INFO] Building my-app 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ my-app ---
+[INFO] 
+[INFO] --- resources:3.0.2:resources (default-resources) @ my-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/Maven Project/my-app/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.0:compile (default-compile) @ my-app ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/Maven Project/my-app/target/classes
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ my-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/Maven Project/my-app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.0:testCompile (default-testCompile) @ my-app ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/Maven Project/my-app/target/test-classes
+[INFO] 
+[INFO] --- surefire:2.22.1:test (default-test) @ my-app ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.pom (3.1 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.1/surefire-providers-2.22.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.1/surefire-providers-2.22.1.pom (2.5 kB at 207 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar (85 kB at 2.2 MB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mycompany.app.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in com.mycompany.app.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ my-app ---
+[INFO] Building jar: /var/lib/jenkins/workspace/Maven Project/my-app/target/my-app-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.137 s
+[INFO] Finished at: 2023-11-30T09:42:53Z
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /var/lib/jenkins/workspace/Maven Project/my-app/pom.xml to com.mycompany.app/my-app/1.0-SNAPSHOT/my-app-1.0-SNAPSHOT.pom
+[JENKINS] Archiving /var/lib/jenkins/workspace/Maven Project/my-app/target/my-app-1.0-SNAPSHOT.jar to com.mycompany.app/my-app/1.0-SNAPSHOT/my-app-1.0-SNAPSHOT.jar
+channel stopped
+Finished: SUCCESS
